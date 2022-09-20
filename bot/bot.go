@@ -54,4 +54,12 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 		_, _ = s.ChannelMessageSend(m.ChannelID, "Hey Nishchal!")
 	}
 
+	if m.Content == "How are you?" {
+		_, _ = s.ChannelMessageSend(m.ChannelID, "Never felt better!.\nWhat about you?")
+	}
+
+	if m.Content == "Tell me about yourself." {
+		_, _ = s.ChannelMessageSend(m.ChannelID, "I am a Bot designed using Golang.\nI can answer some basic questions.")
+	}
+
 }
